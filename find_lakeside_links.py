@@ -62,6 +62,7 @@ def _is_internal(url: str) -> bool:
         host = urlparse(url).netloc.lower()
     except ValueError:
         return False
+        print(host)
     return host == INTERNAL_HOST or host.endswith("." + INTERNAL_HOST)
 
 
